@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://<USERNAME>.github.io/<REPO_NAME>",
+  "homepage": "https://chialin111.github.io/food2",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
