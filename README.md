@@ -1,20 +1,66 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 腎友控鉀互動指南 (CKD Potassium Guide)
 
-# Run and deploy your AI Studio app
+這是一個基於 **ASN 2025** 最新文獻與 **KDIGO 2024** 指南製作的專業互動網頁應用程式。
 
-This contains everything you need to run your app locally.
+## 🎯 專案目標
 
-View your app in AI Studio: https://ai.studio/apps/drive/1rLLAelGTVrJmXPGK8qXy2dIQG5myTCvy
+指導慢性腎臟病 (CKD) 患者如何科學控制飲食中的鉀攝取。本應用程式強調：
+- **生物利用率**：區分「加工食品添加鉀」與「天然食物鉀」的吸收差異。
+- **階梯式管理**：根據血鉀濃度與個人風險因子，提供分級的飲食建議。
+- **互動評估**：使用者可輸入數值與勾選風險，即時獲得策略建議。
 
-## Run Locally
+## 🛠️ 技術架構
 
-**Prerequisites:**  Node.js
+- **Frontend**: React 19, TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Hosting**: GitHub Pages
 
+## 🚀 快速開始
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 1. 安裝依賴
+```bash
+npm install
+```
+
+### 2. 啟動開發伺服器
+```bash
+npm run dev
+```
+打開瀏覽器訪問 `http://localhost:5173` (或終端機顯示的 URL)。
+
+### 3. 建置生產版本
+```bash
+npm run build
+```
+
+## 📦 部署 (Deployment)
+
+本專案已設定 GitHub Actions，推送到 GitHub 的 `main` 或 `master` 分支後將自動部署。
+
+**手動部署方式：**
+1. 確保 `package.json` 中的 `homepage` 欄位已正確設定為您的 GitHub Pages URL。
+2. 執行命令：
+   ```bash
+   npm run deploy
+   ```
+   這將會建置專案並推送 `dist` 資料夾內容到 `gh-pages` 分支。
+
+## 📄 目錄結構
+
+```
+.
+├── .github/workflows/   # CI/CD 設定
+├── src/                 # 原始碼 (App.tsx, constants.tsx, types.ts)
+├── public/              # 靜態資源
+├── package.json         # 專案設定與依賴
+├── tsconfig.json        # TypeScript 設定
+├── vite.config.ts       # Vite 設定
+└── README.md            # 說明文件
+```
+
+---
+**Reference**:
+- ASN 2025 KHG
+- KDIGO 2024 Clinical Practice Guideline
