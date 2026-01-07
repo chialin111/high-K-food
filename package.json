@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://chialin111.github.io/food2",
+  "homepage": "https://chialin111.github.io/high-K-food",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
